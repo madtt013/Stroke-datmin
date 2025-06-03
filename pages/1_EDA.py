@@ -14,11 +14,4 @@ st.dataframe(df.head())
 st.write('Statistical Summary:')
 st.write(df.describe())
 
-st.write('Missing Values:')
-st.write(df.isnull().sum())
 
-st.write('Correlation Heatmap:')
-corr = df.select_dtypes(include='number').corr()
-plt.figure(figsize=(10, 8))
-sns.heatmap(corr, annot=True)
-st.pyplot(plt)
